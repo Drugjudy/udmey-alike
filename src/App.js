@@ -1,9 +1,11 @@
-import Fuck from "./test";
+import TeacherPortal from "./test";
+
+
 
 function App() {
   return (
     <>
-    <Fuck />
+    <TeacherPortal />
     </>
   );
 };

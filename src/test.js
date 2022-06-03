@@ -7,7 +7,7 @@ import { useState } from "react";
 import { signOut } from "firebase/auth";
 import { auth } from "./firebase";
 
-function Fuck() {
+function TeacherPortal() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
 
   const signUserOut = () => {
@@ -41,4 +41,4 @@ function Fuck() {
   );
 }
 
-export default Fuck;
+export default TeacherPortal;
