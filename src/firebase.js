@@ -1,6 +1,5 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -9,18 +8,16 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyD9QoSAyofsOqh0szSyuPghpD4MpeQLt40",
-  authDomain: "beaming-benefit-303217.firebaseapp.com",
-  projectId: "beaming-benefit-303217",
-  storageBucket: "beaming-benefit-303217.appspot.com",
-  messagingSenderId: "755675200501",
-  appId: "1:755675200501:web:1e1ca26e0c425dc0593ebc",
-  measurementId: "G-0P9E06D69W"
+  apiKey: "AIzaSyCwKp_EIEc86VqyAtWWyHbXafuMFpDMta0",
+  authDomain: "idkk-54cb3.firebaseapp.com",
+  projectId: "idkk-54cb3",
+  storageBucket: "idkk-54cb3.appspot.com",
+  messagingSenderId: "958775194817",
+  appId: "1:958775194817:web:15685e03aacffba7719040"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 export const auth = getAuth(app);
 
 

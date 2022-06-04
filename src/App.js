@@ -5,7 +5,7 @@ import Test from "./searchBar.js";
 function App() {
   return (
     <>
-    <Test />
+    <TeacherPortal />
     </>
   );
 };

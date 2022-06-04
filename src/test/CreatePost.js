@@ -7,7 +7,7 @@ function CreatePost({ isAuth }) {
   const [title, setTitle] = useState("");
   const [postText, setPostText] = useState("");
 
-  const postsCollectionRef = collection(db, "uploads");
+  const postsCollectionRef = collection(db, "info");
   let navigate = useNavigate();
 
   const createPost = async () => {

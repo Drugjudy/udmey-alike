@@ -5,7 +5,7 @@ import { db } from "../firebase";
 
 export default function Home() {
   const [postLists, setPostList] = useState([]);
-  const postsCollectionRef = collection(db, "uploads");
+  const postsCollectionRef = collection(db, "info");
 
   useEffect(() => {
     const getPosts = async () => {
