@@ -9,7 +9,7 @@ const getFilteredItems = (query, items) => {
   return items.filter((song) => song.name.includes(query));
 };
 
-export default function Test() {
+export default function Search() {
   const [query, setQuery] = useState("");
 
   const { tracks } = THANK_U_NEXT;

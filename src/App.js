@@ -1,11 +1,11 @@
 import TeacherPortal from "./Upload-system";
-import Test from "./searchBar.js";
-
+import Search from "./searchBar.js";
+import Test from "./test";
 
 function App() {
   return (
     <>
-    <TeacherPortal />
+    <Test />
     </>
   );
 };
