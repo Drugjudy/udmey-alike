@@ -6,9 +6,9 @@ import {
   signOut,
 } from "firebase/auth";
 import "./App.css";
-import { auth } from "./firebase";
+import { auth } from "../firebase";
 
-function Test() {
+function EmailLog() {
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
   const [loginEmail, setLoginEmail] = useState("");
@@ -101,4 +101,4 @@ function Test() {
   );
 }
 
-export default Test;
+export default EmailLog;

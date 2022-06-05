@@ -1,13 +1,13 @@
-import TeacherPortal from "./Upload-system";
-import Search from "./searchBar.js";
+import TeacherPortal from "./backend/Upload-system";
+import Search from "./backend/searchBar.js";
 import Yt from "./youtube";
-import Test from "./test";
-import Payment from "./payment";
+
+import Payment from "./backend/payment";
 
 function App() {
   return (
     <>
-    <Test />
+    <TeacherPortal />
     </>
   );
 };

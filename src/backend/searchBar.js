@@ -1,5 +1,5 @@
 import { useState } from "react";
-import THANK_U_NEXT from "./THANK_U_NEXT";
+import THANK_U_NEXT from "../THANK_U_NEXT";
 
 
 const getFilteredItems = (query, items) => {

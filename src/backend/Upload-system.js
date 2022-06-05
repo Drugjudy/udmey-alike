@@ -1,11 +1,11 @@
-import "./App.css";
+
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./test/Home";
-import CreatePost from "./test/CreatePost";
-import Login from "./test/Login";
+import Home from "../test/Home";
+import CreatePost from "../test/CreatePost";
+import Login from "../test/Login";
 import { useState } from "react";
 import { signOut } from "firebase/auth";
-import { auth } from "./firebase";
+import { auth } from "../firebase";
 
 function TeacherPortal() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
