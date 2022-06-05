@@ -1,13 +1,12 @@
-import TeacherPortal from "./backend/Upload-system";
-import Search from "./backend/searchBar.js";
-import Yt from "./youtube";
 
-import Payment from "./backend/payment";
+import EmailLog from "./backend/login-email";
+
+
 
 function App() {
   return (
     <>
-    <TeacherPortal />
+    <EmailLog />
     </>
   );
 };

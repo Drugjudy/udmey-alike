@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
+import "../frontend/student-portal/css/ogin.scss"
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
   signOut,
 } from "firebase/auth";
-import "./App.css";
 import { auth } from "../firebase";
 
 function EmailLog() {
@@ -56,49 +56,20 @@ function EmailLog() {
   };
 
   return (
-    <div className="App">
-      <div>
-        <h3> Register User </h3>
-        <input
-          placeholder="Email..."
-          onChange={(event) => {
+    <>
+    
+      <form class="login">
+  <input  onChange={(event) => {
             setRegisterEmail(event.target.value);
-          }}
-        />
-        <input
-          placeholder="Password..."
-          onChange={(event) => {
+          }} type="text" placeholder="Username" />
+  <input  onChange={(event) => {
             setRegisterPassword(event.target.value);
-          }}
-        />
+          }} type="password" placeholder="Password" />
+  <button onClick={register}>Login</button>
+</form>
 
-        <button onClick={register}> Create User</button>
-      </div>
-
-      <div>
-        <h3> Login </h3>
-        <input
-          placeholder="Email..."
-          onChange={(event) => {
-            setLoginEmail(event.target.value);
-          }}
-        />
-        <input
-          placeholder="Password..."
-          onChange={(event) => {
-            setLoginPassword(event.target.value);
-          }}
-        />
-
-        <button onClick={login}> Login</button>
-      </div>
-
-      <h4> User Logged In: </h4>
-     {user ? user.email : "Not Logged In"}
-
-      <button onClick={logout}> Sign Out </button>
-    </div>
-  );
+    </>
+  )
 }
 
 export default EmailLog;
