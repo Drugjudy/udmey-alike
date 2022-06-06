@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Login from "../test/Login";
 import "../frontend/student-portal/css/login.css"
 import {
   createUserWithEmailAndPassword,
@@ -6,9 +7,22 @@ import {
   onAuthStateChanged,
   signOut,
 } from "firebase/auth";
-import { auth } from "../firebase";
+import { Idk } from "../firebase";
+import { auth, provider, signInWithGoogle } from "../firebase";
+import { signInWithPopup } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
-function EmailLog() {
+function EmailLog  ({ setIsAuth })  {
+  let navigate = useNavigate();
+
+  const signInWithGoogle = () => {
+    signInWithPopup(auth, provider).then((result) => {
+      localStorage.setItem("isAuth", true);
+      setIsAuth(true);
+      navigate("/");
+    });
+  };
+
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
   const [loginEmail, setLoginEmail] = useState("");
@@ -23,8 +37,9 @@ function EmailLog() {
 
 }, [])
 
-  
 
+
+  
   const register = async () => {
     try {
       const user = await createUserWithEmailAndPassword(
@@ -59,58 +74,69 @@ function EmailLog() {
     <>
 
 
-
-    <div class="background">
-        <div class="shape"></div>
-        <div class="shape"></div>
+<div className="bgbody">
+    <div className="background">
+        <div className="shape"></div>
+        <div className="shape"></div>
+        
     </div>
     
     <div className="title">
       <h1 >
-        Welcome
+        Welcome Curious Learners
       </h1>
     </div>
       
     <div className="right">
       
-        <h3>New Student</h3>
+        <h3>New Learners</h3>
 
-        <label for="username">Email</label>
+        <label htmlFor="username">Email</label>
         <input onChange={(event) => {
             setRegisterEmail(event.target.value);
           }} type="text" placeholder="Email or Phone" id="username" />
 
-        <label for="password">Password</label>
+        <label htmlFor="password">Password</label>
         <input onChange={(event) => {
             setRegisterPassword(event.target.value);
           }} type="password" placeholder="Password" id="password" />
 
         <button onClick={register} >Register</button>
+        <div className="social">
+         <a onClick={signInWithGoogle}>
+           <div>
+             google
+           </div>
+         </a>
+        <p>Sign In With Google to Continue</p>
+      <button className="login-with-google-btn" onClick={signInWithGoogle}>
+        Sign in with Google
+      </button>
+   </div> 
          </div >
+         
 
         <div className="left">
-        <h3>Student Login</h3>
-         <label for="username">Email</label>
+        <h3>Learnehhhhrs Login</h3>
+         <label htmlFor="username">Email</label>
         <input  onChange={(event) => {
             setLoginEmail(event.target.value);
-          }} type="text" placeholder="Email or Phone" id="username" />
+          }} type="text" placeholder="Email or Phone" id="usernamelog" />
 
-        <label for="password">Password</label>
+        <label htmlFor="password">Password</label>
         <input onChange={(event) => {
             setLoginPassword(event.target.value);
-          }}  type="password" placeholder="Password" id="password" />
+          }}  type="password" placeholder="Password" id="passwordlog" />
 
-        <button onClick={login}>Log In</button>
-        <div class="social">
-          <div class="go"><i class="fab fa-google"></i>  Google</div>
+        <button onClick={Login}>Log In</button>
         
-   </div> 
   
    </div>
-
+</div>
 
     </>
   )
-}
+};
+
 
 export default EmailLog;

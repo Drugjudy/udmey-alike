@@ -2,6 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -23,16 +24,24 @@ export const auth = getAuth(app);
 
 export const provider = new GoogleAuthProvider();
 
-export const signInWithGoogle = () => {
+
+  
+export function signInWithGoogle ()  {
+
   signInWithPopup(auth, provider)
     .then((result) => {
       const name = result.user.displayName;
       const email = result.user.email;
       const profilePic = result.user.photoURL;
-
+      
       localStorage.setItem("name", name);
       localStorage.setItem("email", email);
       localStorage.setItem("profilePic", profilePic);
+
+      if (name) {
+        console.log("hello")
+      }
+      
     })
     .catch((error) => {
       console.log(error);

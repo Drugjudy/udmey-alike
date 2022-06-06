@@ -1,15 +1,12 @@
-*:before,
-*:after{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+
+
 body{
-    background-color: #080710;
+ background-color: #120d0d;
 }
 .background{
     width: 430px;
     height: 520px;
+    
     position: absolute;
     transform: translate(-50%,-50%);
     left: 50%;
@@ -26,7 +23,7 @@ body{
         #1845ad,
         #23a2f6
     );
-    left: -80px;
+    left: -300px;
     top: -80px;
 }
 .shape:last-child{
@@ -44,12 +41,12 @@ body{
     background-color: rgba(255,255,255,0.13);
     position: absolute;
     transform: translate(-50%,-50%);
-    top: 55%;
+    top: 56%;
     left: 30%;
     border-radius: 10px;
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255,255,255,0.1);
-    box-shadow: 0 0 40px rgba(91, 232, 211, 0.6);
+    box-shadow: 0 0 40px #23a2f6;
     padding: 10px 35px;
 }
 .right *{
@@ -90,7 +87,7 @@ input{
 button{
     margin-top: 50px;
     width: 100%;
-    background-color: #ea863a;
+    background-color: #3a72ea;
     color: #080710;
     padding: 15px 0;
     font-size: 18px;
@@ -104,9 +101,9 @@ button{
 }
 .social div{
   background: red;
-  width: 150px;
+  width: 400px;
   border-radius: 3px;
-  padding: 5px 10px 10px 5px;
+  padding: 7px 10px 10px 5px;
   background-color: rgba(255,255,255,0.27);
   color: #eaf0fb;
   text-align: center;
@@ -128,12 +125,12 @@ button{
     background-color: rgba(255,255,255,0.13);
     position: absolute;
     transform: translate(-50%,-50%);
-    top: 55%;
+    top: 56%;
     left: 70%;
     border-radius: 10px;
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255,255,255,0.1);
-    box-shadow: 0 0 40px rgba(91, 232, 211, 0.6);
+    box-shadow: 0 0 40px #e0a34d;;
     padding: 10px 35px;
 }
 
@@ -154,9 +151,9 @@ button{
 }
 
 .title {
-    font-size: xx-large;
-    color:orangered;
+    font-size: x-large;
+    color:cornsilk;
     position:absolute;
-    top: 2%;
-    left: 45%;
+    top: 1%;
+    left: 32%;
 }
