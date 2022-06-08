@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCwKp_EIEc86VqyAtWWyHbXafuMFpDMta0",
+ apiKey: "AIzaSyCwKp_EIEc86VqyAtWWyHbXafuMFpDMta0",
   authDomain: "idkk-54cb3.firebaseapp.com",
   projectId: "idkk-54cb3",
   storageBucket: "idkk-54cb3.appspot.com",

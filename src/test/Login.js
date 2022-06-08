@@ -4,7 +4,7 @@ import { signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "../frontend/student-portal/css/login.css"
-import "../frontend/student-portal/css/login.css"
+
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -81,7 +81,7 @@ function Login  ({ setIsAuth })  {
 
 
   return (
-    <>
+  
  <div className="bgbody">
     <div className="background">
         <div className="shape"></div>
@@ -140,7 +140,7 @@ function Login  ({ setIsAuth })  {
 </div>
     
   
-    </>
+    
   );
 }
 

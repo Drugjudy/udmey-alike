@@ -1,12 +1,12 @@
 
-
 body{
- background-color: #120d0d;
+    background-color: #5b9b8f;
 }
+
 .background{
     width: 430px;
     height: 520px;
-    
+    background-color: #030202;
     position: absolute;
     transform: translate(-50%,-50%);
     left: 50%;
