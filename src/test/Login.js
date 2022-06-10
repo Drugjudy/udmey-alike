@@ -99,17 +99,17 @@ function Login  ({ setIsAuth })  {
       
         <h3>New Learners</h3>
 
-        <label htmlFor="username">Email</label>
-        <input onChange={(event) => {
+        <label  className="label" htmlFor="username">Email</label>
+        <input className="input" onChange={(event) => {
             setRegisterEmail(event.target.value);
           }} type="text" placeholder="Email or Phone" id="username" />
 
-        <label htmlFor="password">Password</label>
-        <input onChange={(event) => {
+        <label  className="label" htmlFor="password">Password</label>
+        <input className="input" onChange={(event) => {
             setRegisterPassword(event.target.value);
           }} type="password" placeholder="Password" id="password" />
 
-        <button onClick={register} >Register</button>
+        <button className="button" onClick={register} >Register</button>
         <div className="social">
          <a onClick={signInWithGoogle}>
            <div>
@@ -123,17 +123,17 @@ function Login  ({ setIsAuth })  {
 
         <div className="left">
         <h3>Learners login</h3>
-         <label htmlFor="username">Email</label>
-        <input  onChange={(event) => {
+         <label className="label" htmlFor="username">Email</label>
+        <input className="input" onChange={(event) => {
             setLoginEmail(event.target.value);
           }} type="text" placeholder="Email or Phone" id="usernamelog" />
 
-        <label htmlFor="password">Password</label>
-        <input onChange={(event) => {
+        <label  className="label" htmlFor="password">Password</label>
+        <input className="input" onChange={(event) => {
             setLoginPassword(event.target.value);
           }}  type="password" placeholder="Password" id="passwordlog" />
 
-        <button onClick={login}>Log In</button>
+        <button className="button" onClick={login}>Log In</button>
         
   
    </div>

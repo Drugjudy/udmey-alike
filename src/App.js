@@ -6,7 +6,9 @@ import Login from "./test/Login";
 import { useState } from "react";
 import { signOut } from "firebase/auth";
 import { auth } from "./firebase";
-import Teacher from "./frontend/upload";
+import C1 from "./frontend/courses/C1";
+import Homepage from "./frontend/homepage";
+import Yt from "./youtube";
 
 function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
@@ -23,8 +25,9 @@ function App() {
     <Router>
       
       <Routes>
-        <Route path="/" element={<Home isAuth={isAuth} />} />
-         <Route path="/teacher" element={<Teacher />} />
+        <Route path="/" element={<Homepage isAuth={isAuth} />} />
+        <Route path="/home" element={<Home isAuth={isAuth} />} />
+<Route path="/test" element={<Yt />} />
         <Route path="/createpost" element={<CreatePost isAuth={isAuth} />} />
         <Route path="/Search" element={<Search />} />
         <Route path="/login" element={<Login setIsAuth={setIsAuth} />} />

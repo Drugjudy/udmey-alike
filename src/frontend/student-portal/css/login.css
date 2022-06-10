@@ -6,7 +6,7 @@ body{
 .background{
     width: 430px;
     height: 520px;
-    background-color: #030202;
+    
     position: absolute;
     transform: translate(-50%,-50%);
     left: 50%;
@@ -63,13 +63,13 @@ body{
     text-align: center;
 }
 
-label{
+.label{
     display: block;
     margin-top: 30px;
     font-size: 16px;
     font-weight: 500;
 }
-input{
+.input{
 
     display: block;
     height: 50px;
@@ -84,7 +84,7 @@ input{
 ::placeholder{
     color: #030202;
 }
-button{
+.button{
     margin-top: 50px;
     width: 100%;
     background-color: #3a72ea;
