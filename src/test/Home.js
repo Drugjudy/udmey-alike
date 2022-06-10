@@ -1,8 +1,8 @@
-
+import Homepage from "../frontend/homepage";
 import { collection, getDoc, getDocs } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { db } from "../firebase"; 
-
+import Navb from "../frontend/boostarp/navbar";
 export default function Home() {
   const [postLists, setPostList] = useState([]);
   const postsCollectionRef = collection(db, "info");
@@ -20,11 +20,12 @@ export default function Home() {
 return (
   <>
   <div>
+         <Navb />
     {postLists.map((post) => {
       return <div>
-        {post.title}
-        {post.postText}
-        {post.price}
+   
+        
+<Homepage title={post.title} intro={post.postText} /> 
         
       </div>
     })}
